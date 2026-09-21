@@ -1,12 +1,41 @@
 public class Produtos {
-    int idProduto;
-    String nome;
-    double preco;
+    private int idProduto;
+    private String descricao;
+    private double precoUnitario;
+    private int quantidadeDisponivel;
 
-    public Produtos(int idProduto, String nome, double preco) {
-        this.idProduto = idProduto;
-        this.nome = nome;
-        this.preco = preco;
+    public int getIdProduto() {
+        return idProduto;
     }
+
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getPrecoUnitario() {
+        return precoUnitario;
+    }
+
+    public void setPrecoUnitario(double precoUnitario) {
+        this.precoUnitario = precoUnitario;
+    }
+
+    public int getQuantidadeDisponivel() {
+        return quantidadeDisponivel;
+    }
+
+    public void setQuantidadeDisponivel(int quantidadeDisponivel) {
+        this.quantidadeDisponivel = quantidadeDisponivel;
+    }
+
+    
     
 }

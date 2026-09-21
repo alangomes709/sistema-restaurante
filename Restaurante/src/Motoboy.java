@@ -1,14 +1,24 @@
 public class Motoboy {
-    int idMotoboy;
-    String nome;
-    String endDestino;
-    String complemento;
+    private int idMotoboy;
+    private String nome;
 
-    public Motoboy(int idMotoboy, String nome, String endDestino, String complemento) {
-        this.idMotoboy = idMotoboy;
-        this.nome = nome;
-        this.endDestino = endDestino;
-        this.complemento = complemento;
+    public int getIdMotoboy() {
+        return idMotoboy;
     }
+
+    public void setIdMotoboy(int idMotoboy) {
+        this.idMotoboy = idMotoboy;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    
+    
     
 }

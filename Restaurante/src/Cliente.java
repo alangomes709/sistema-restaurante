@@ -1,13 +1,46 @@
-public class Cliente {
 
-    public Cliente(int idCliente, String nomeCliente, int idMesa, String endereco) {
-        this.idCliente = idCliente;
-        this.nomeCliente = nomeCliente;
-        this.idMesa = idMesa;
-        this.endereco = endereco;
+import java.util.ArrayList;
+
+public class Cliente {
+    private String cpfCliente;
+    private String nome;
+    private int idMesa;
+    private ArrayList<Endereco> endereco;
+    private ArrayList<Contato> contato;    
+    
+    public ArrayList<Endereco> getEndereco() {
+        return endereco;
     }
-    int idCliente;
-    String nomeCliente;
-    int idMesa;
-    String endereco;
+
+    public ArrayList<Contato> getContato() {
+        return contato;
+    }
+    
+    public String getCpfCliente() {
+        return cpfCliente;
+    }
+
+    public void setCpfCliente(String cpfCliente) {
+        this.cpfCliente = cpfCliente;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdMesa() {
+        return idMesa;
+    }
+
+    public void setIdMesa(int idMesa) {
+        this.idMesa = idMesa;
+    }
+    
+    
+    
+    
 }

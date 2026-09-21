@@ -1,13 +1,32 @@
-public class Pedido {
-    int idPedido;
-    String embalagem;
-    String status;
-    String dataPedido;
 
-    public Pedido(int idPedido, String embalagem, String dataPedido, String status) {
-        this.idPedido = idPedido;
-        this.embalagem = embalagem;
-        this.status = status;
-        this.dataPedido = dataPedido;
+import java.util.ArrayList;
+
+public class Pedido {
+    private int idPedido;
+    private int quantidadeSolicitada;
+    private ArrayList<Produtos> produto;
+
+    public int getIdPedido() {
+        return idPedido;
     }
+
+    public void setIdPedido(int idPedido) {
+        this.idPedido = idPedido;
+    }
+
+    public int getQuantidadeSolicitada() {
+        return quantidadeSolicitada;
+    }
+
+    public void setQuantidadeSolicitada(int quantidadeSolicitada) {
+        this.quantidadeSolicitada = quantidadeSolicitada;
+    }
+
+    public void setProduto(ArrayList<Produtos> produto) {
+        this.produto = produto;
+    }
+    
+    
+
+    
 }
