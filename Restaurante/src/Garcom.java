@@ -1,23 +1,16 @@
 public class Garcom extends Pessoa {
-    private int idGarcom;
-    private String nome;
+    private String idGarcom;
 
-    public int getIdGarcom() {
+    public String getIdGarcom() {
         return idGarcom;
     }
 
-    public void setIdGarcom(int idGarcom) {
+    public void setIdGarcom(String idGarcom) {
+        if (idGarcom.isEmpty()==false || this.idGarcom != null){
         this.idGarcom = idGarcom;
+            
+        }
+        throw new IllegalArgumentException("id do garçom invalido");
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    
     
 }

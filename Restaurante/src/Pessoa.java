@@ -21,8 +21,11 @@ public class Pessoa {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        if (cpf.isEmpty()==false || this.cpf!=null && this.cpf.length()==11){
+        this.cpf = cpf;  
+        }
+        throw new IllegalArgumentException("CPF invalido");
     }
-    
-    
 }
+    
+    

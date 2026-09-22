@@ -7,7 +7,11 @@ public class Contato {
     }
 
     public void setTelefone(String telefone) {
+        if (telefone.isEmpty()==false || this.telefone!=null && this.telefone.length()==11){
         this.telefone = telefone;
+            
+        }
+        throw new IllegalArgumentException("numero invalido");
     }
 
     public String getEmail() {
@@ -17,7 +21,11 @@ public class Contato {
     
     //verificar se tem um @ na string e null e os outros la
     public void setEmail(String email) {
+        if (email.isEmpty()==false || this.email!=null && this.email.contains("@")){
         this.email = email;
+            
+        }
+        throw new IllegalArgumentException("email invalido");
     }
     
 }

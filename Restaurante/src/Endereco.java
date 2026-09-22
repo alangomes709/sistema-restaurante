@@ -11,7 +11,11 @@ public class Endereco {
     }
 
     public void setIdEndereco(String idEndereco) {
+        if(idEndereco.isEmpty()==false || this.idEndereco!=null){
         this.idEndereco = idEndereco;
+            
+        }
+        throw new IllegalArgumentException("endereço invalido");
     }
 
     public String getRua() {
@@ -19,7 +23,11 @@ public class Endereco {
     }
 
     public void setRua(String rua) {
+        if (rua.isEmpty()==false || this.rua!=null){
         this.rua = rua;
+            
+        }
+        throw new IllegalArgumentException("rua invalida");
     }
 
     public String getCep() {
@@ -27,7 +35,11 @@ public class Endereco {
     }
 
     public void setCep(String cep) {
+        if (cep.isEmpty()==false || this.cep!=null){
         this.cep = cep;
+            
+        }
+        throw new IllegalArgumentException("CEP invalido");
     }
 
     public String getBairro() {
@@ -35,7 +47,11 @@ public class Endereco {
     }
 
     public void setBairro(String bairro) {
+        if (bairro.isEmpty()==false || this.bairro!=null){
         this.bairro = bairro;
+            
+        }
+        throw new IllegalArgumentException("bairro invalido");
     }
 
     public String getComplemento() {
@@ -43,7 +59,11 @@ public class Endereco {
     }
 
     public void setComplemento(String complemento) {
+        if (complemento.isEmpty()==false || this.complemento!=null){
         this.complemento = complemento;
+            
+        }
+        throw new IllegalArgumentException("complemento invalido");
     }
 
     public int getNumCasa() {
@@ -51,10 +71,10 @@ public class Endereco {
     }
 
     public void setNumCasa(int numCasa) {
+        if (numCasa > 0){
         this.numCasa = numCasa;
-    }
-    
-    
-    
-    
+            
+        }
+        throw new IllegalArgumentException("numero invalido");
+    }   
 }

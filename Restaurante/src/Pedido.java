@@ -2,16 +2,20 @@
 import java.util.ArrayList;
 
 public class Pedido {
-    private int idPedido;
+    private String idPedido;
     private int quantidadeSolicitada;
     private ArrayList<Produtos> produto;
 
-    public int getIdPedido() {
+    public String getIdPedido() {
         return idPedido;
     }
 
-    public void setIdPedido(int idPedido) {
+    public void setIdPedido(String idPedido) {
+        if (idPedido.isEmpty()==false || this.idPedido!=null){
         this.idPedido = idPedido;
+            
+        }
+        throw new IllegalArgumentException("id do pedido invalido");
     }
 
     public int getQuantidadeSolicitada() {
@@ -19,14 +23,15 @@ public class Pedido {
     }
 
     public void setQuantidadeSolicitada(int quantidadeSolicitada) {
+        if (this.quantidadeSolicitada >= 0){
         this.quantidadeSolicitada = quantidadeSolicitada;
+            
+        }
+        throw new IllegalArgumentException("quantidade invalida");
     }
 
-    public void setProduto(ArrayList<Produtos> produto) {
-        this.produto = produto;
+    public ArrayList<Produtos> getProduto() {
+        return produto;
     }
-    
-    
 
-    
 }

@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 
 public class Comanda {
-    private int idComanda;
+    private String idComanda;
     private boolean status;
     private String data;
     private ArrayList<Cliente> cliente;
@@ -11,12 +11,16 @@ public class Comanda {
     private ArrayList<Entrega> entrega;
     private ArrayList<Pagamento> pagamento;
 
-    public int getIdComanda() {
+    public String getIdComanda() {
         return idComanda;
     }
 
-    public void setIdComanda(int idComanda) {
+    public void setIdComanda(String idComanda) {
+        if (idComanda.isEmpty()==false || this.idComanda!=null){
         this.idComanda = idComanda;
+            
+        }
+        throw new IllegalArgumentException("id da comanda invalido");
     }
 
     public boolean isStatus() {
@@ -32,7 +36,11 @@ public class Comanda {
     }
 
     public void setData(String data) {
+        if (data.isEmpty()==false || this.data!=null){
         this.data = data;
+            
+        }
+        throw new IllegalArgumentException("data invalida");
     }
 
     public ArrayList<Cliente> getCliente() {

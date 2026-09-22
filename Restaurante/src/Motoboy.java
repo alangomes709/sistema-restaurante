@@ -1,12 +1,16 @@
 public class Motoboy extends Pessoa {
-    private int idMotoboy;
+    private String idMotoboy;
 
-    public int getIdMotoboy() {
+    public String getIdMotoboy() {
         return idMotoboy;
     }
 
-    public void setIdMotoboy(int idMotoboy) {
+    public void setIdMotoboy(String idMotoboy) {
+        if (idMotoboy.isEmpty()==false || this.idMotoboy!=null){
         this.idMotoboy = idMotoboy;
+            
+        }
+        throw new IllegalArgumentException("id do motoboy invalido");
     }   
     
 }
