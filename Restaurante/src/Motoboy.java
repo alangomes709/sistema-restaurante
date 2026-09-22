@@ -1,6 +1,5 @@
-public class Motoboy {
+public class Motoboy extends Pessoa {
     private int idMotoboy;
-    private String nome;
 
     public int getIdMotoboy() {
         return idMotoboy;
@@ -8,17 +7,6 @@ public class Motoboy {
 
     public void setIdMotoboy(int idMotoboy) {
         this.idMotoboy = idMotoboy;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
-    
-    
+    }   
     
 }

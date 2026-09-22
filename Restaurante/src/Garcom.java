@@ -1,4 +1,4 @@
-public class Garcom {
+public class Garcom extends Pessoa {
     private int idGarcom;
     private String nome;
 
