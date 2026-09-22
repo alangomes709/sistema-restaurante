@@ -2,8 +2,7 @@ package br.edu.ifba.sistema_restaurante;
 
 public class Pagamento {
     private String idPagamento;
-    private double taxaServico;
-    private double total;
+    private double taxaServico;    
     private MetodoPagamento metPag;
 
     public String getIdPagamento() {
@@ -12,8 +11,7 @@ public class Pagamento {
 
     public void setIdPagamento(String idPagamento) {
         if (idPagamento != null && idPagamento.trim().isEmpty() == false ){
-        this.idPagamento = idPagamento;
-            
+            this.idPagamento = idPagamento;            
         }else{
         throw new IllegalArgumentException("id do pagamento invalido");
             
@@ -30,18 +28,6 @@ public class Pagamento {
             
         }
         throw new IllegalArgumentException("taxa de serviço invalida");
-    }
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        if (total >= 0){
-        this.total = total;
-            
-        }
-        throw new IllegalArgumentException("total invalido");
     }
 
     public MetodoPagamento getMetPag() {

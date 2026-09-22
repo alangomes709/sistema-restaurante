@@ -9,11 +9,9 @@ public class Entrega extends Endereco {
 
     public void setIdEntrega(String idEntrega) {
         if (idEntrega != null && idEntrega.trim().isEmpty() == false ){
-        this.idEntrega = idEntrega;
-            
+            this.idEntrega = idEntrega;
         }else{
-        throw new IllegalArgumentException("id da entrega invalido");
-            
+            throw new IllegalArgumentException("id da entrega invalido");
         }
     }    
 }

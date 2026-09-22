@@ -9,11 +9,9 @@ public class Motoboy extends Pessoa {
 
     public void setIdMotoboy(String idMotoboy) {
         if (idMotoboy != null && idMotoboy.trim().isEmpty() == false ){
-        this.idMotoboy = idMotoboy;
-            
+            this.idMotoboy = idMotoboy;            
         }else{
-        throw new IllegalArgumentException("id do motoboy invalido");
-            
+            throw new IllegalArgumentException("id do motoboy invalido");            
         }
     }   
     

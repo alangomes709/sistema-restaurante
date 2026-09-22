@@ -8,14 +8,12 @@ public class MetodoPagamento {
     public String getMetodoPagamento() {
         return metodoPagamento;
     }
-
+    
     public void setMetodoPagamento(String metodoPagamento) {
         if (metodoPagamento != null && metodoPagamento.trim().isEmpty() == false ){
-        this.metodoPagamento = metodoPagamento;
-            
+            this.metodoPagamento = metodoPagamento;            
         }else{
-        throw new IllegalArgumentException("metodo de pagamento invalido");
-            
+            throw new IllegalArgumentException("metodo de pagamento invalido");            
         }
     }
 

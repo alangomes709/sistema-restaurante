@@ -8,6 +8,7 @@ public class Cliente extends Pessoa {
     private String idMesa;
     private ArrayList<Endereco> end;
     private ArrayList<Contato> cont;
+        
 
     public String getIdCliente() {
         return idCliente;
@@ -15,10 +16,9 @@ public class Cliente extends Pessoa {
 
     public void setIdCliente(String idCliente) {
         if (idCliente != null && idCliente.trim().isEmpty() == false ){
-        this.idCliente = idCliente;        
+            this.idCliente = idCliente;        
         }else{
-        throw new IllegalArgumentException("id do cliente invalido");
-            
+            throw new IllegalArgumentException("id do cliente invalido");            
         }
     }
 
@@ -36,11 +36,9 @@ public class Cliente extends Pessoa {
 
     public void setIdMesa(String idMesa) {
         if (idMesa != null && idMesa.trim().isEmpty() == false ){
-        this.idMesa = idMesa;
-            
+            this.idMesa = idMesa;            
         }else{
-        throw new IllegalArgumentException("id da mesa invalido");
-            
+            throw new IllegalArgumentException("id da mesa invalido");            
         }
     }   
 }

@@ -11,9 +11,8 @@ public class Contato {
     public void setTelefone(String telefone) {
         if (telefone != null && telefone.trim().isEmpty() == false && telefone.length() == 11){
             this.telefone = telefone;            
-        }else{
-        throw new IllegalArgumentException("numero invalido");
-            
+        } else {
+            throw new IllegalArgumentException("numero invalido");
         }
     }
 
@@ -25,9 +24,7 @@ public class Contato {
         if (email != null && email.trim().isEmpty() == false && email.contains("@")){
             this.email = email;            
         }else{
-        throw new IllegalArgumentException("email invalido");
-            
+            throw new IllegalArgumentException("email invalido");
         }
     }
-    
 }

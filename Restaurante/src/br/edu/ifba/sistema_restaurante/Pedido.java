@@ -1,15 +1,11 @@
 package br.edu.ifba.sistema_restaurante;
 
-
 import java.util.ArrayList;
 
 public class Pedido {
     private String idPedido;
     private int quantidadeSolicitada;
-    
     private ArrayList<Produtos> produto;
-//    private Produtos prod;
-    // criar getter e setter caso fique assim
 
     public ArrayList<Produtos> getProduto() {
         return produto;
@@ -21,11 +17,9 @@ public class Pedido {
 
     public void setIdPedido(String idPedido) {
         if (idPedido != null && idPedido.trim().isEmpty() == false){
-        this.idPedido = idPedido;
-            
+            this.idPedido = idPedido;
         }else{
-        throw new IllegalArgumentException("id do pedido invalido");
-            
+            throw new IllegalArgumentException("id do pedido invalido");
         }
     }
 
@@ -35,11 +29,9 @@ public class Pedido {
 
     public void setQuantidadeSolicitada(int quantidadeSolicitada) {
         if (quantidadeSolicitada >= 0){
-        this.quantidadeSolicitada = quantidadeSolicitada;
-            
+            this.quantidadeSolicitada = quantidadeSolicitada;
         }else{
-        throw new IllegalArgumentException("quantidade invalida");
-            
+            throw new IllegalArgumentException("quantidade invalida");
         }
     }
 

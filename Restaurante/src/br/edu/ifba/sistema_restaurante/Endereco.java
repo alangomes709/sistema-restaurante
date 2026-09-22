@@ -14,11 +14,9 @@ public class Endereco {
 
     public void setIdEndereco(String idEndereco) {
         if(idEndereco != null && idEndereco.trim().isEmpty() == false ){
-        this.idEndereco = idEndereco;
-            
+            this.idEndereco = idEndereco;
         }else{
-        throw new IllegalArgumentException("endereço invalido");
-            
+            throw new IllegalArgumentException("endereço invalido");
         }
     }
 
@@ -28,11 +26,9 @@ public class Endereco {
 
     public void setRua(String rua) {
         if (rua != null && rua.trim().isEmpty() == false ){
-        this.rua = rua;
-            
+            this.rua = rua;
         }else{
-        throw new IllegalArgumentException("rua invalida");
-            
+            throw new IllegalArgumentException("rua invalida");
         }
     }
 
@@ -42,11 +38,9 @@ public class Endereco {
 
     public void setCep(String cep) {
         if (cep != null && cep.trim().isEmpty() == false && cep.length() == 8){
-        this.cep = cep;
-            
+            this.cep = cep;
         }else{
-        throw new IllegalArgumentException("CEP invalido");
-            
+            throw new IllegalArgumentException("CEP invalido");
         }
     }
 
@@ -56,11 +50,9 @@ public class Endereco {
 
     public void setBairro(String bairro) {
         if (bairro != null && bairro.trim().isEmpty() == false ){
-        this.bairro = bairro;
-            
+            this.bairro = bairro;
         }else{
-        throw new IllegalArgumentException("bairro invalido");
-            
+            throw new IllegalArgumentException("bairro invalido");
         }
     }
 
@@ -70,11 +62,9 @@ public class Endereco {
 
     public void setComplemento(String complemento) {
         if (complemento != null && complemento.trim().isEmpty() == false){
-        this.complemento = complemento;
-            
+            this.complemento = complemento;            
         }else{
-        throw new IllegalArgumentException("complemento invalido");
-            
+            throw new IllegalArgumentException("complemento invalido");
         }
     }
 
@@ -84,11 +74,9 @@ public class Endereco {
 
     public void setNumCasa(int numCasa) {
         if (numCasa > 0){
-        this.numCasa = numCasa;
-            
+            this.numCasa = numCasa;
         }else{
-        throw new IllegalArgumentException("O numero da casa deve ser maior que 0");
-            
+            throw new IllegalArgumentException("O numero da casa deve ser maior que 0");
         }
     }   
 }

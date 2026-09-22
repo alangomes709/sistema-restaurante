@@ -4,9 +4,6 @@ public class Pessoa {
     private String nome;
     private String cpf;
 
-    //////construtor
-    
-    
     public String getNome() {
         return nome;
     }
@@ -15,8 +12,7 @@ public class Pessoa {
         if (nome != null && nome.trim().isEmpty() == false ) {
             this.nome = nome;
         }else{
-        throw new IllegalArgumentException("O nome não pode ser vazio.");                
-            
+            throw new IllegalArgumentException("O nome não pode ser vazio.");                
         }
     }
 
@@ -26,10 +22,9 @@ public class Pessoa {
 
     public void setCpf(String cpf) {
         if (cpf != null && cpf.isEmpty() == false && cpf.length() == 11){
-        this.cpf = cpf;  
+            this.cpf = cpf;  
         }else{
-        throw new IllegalArgumentException("CPF invalido");
-            
+            throw new IllegalArgumentException("CPF invalido");
         }
     }
 }
