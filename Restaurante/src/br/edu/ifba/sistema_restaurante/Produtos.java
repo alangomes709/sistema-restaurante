@@ -1,3 +1,5 @@
+package br.edu.ifba.sistema_restaurante;
+
 public class Produtos {
     private String idProduto;
     private String descricao;

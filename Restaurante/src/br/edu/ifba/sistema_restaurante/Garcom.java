@@ -1,3 +1,5 @@
+package br.edu.ifba.sistema_restaurante;
+
 public class Garcom extends Pessoa {
     private String idGarcom;
 

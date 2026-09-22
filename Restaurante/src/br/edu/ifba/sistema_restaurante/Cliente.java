@@ -1,11 +1,13 @@
+package br.edu.ifba.sistema_restaurante;
+
 
 import java.util.ArrayList;
 
 public class Cliente extends Pessoa {
     private String idCliente;
     private String idMesa;
-    private ArrayList<Endereco> endereco;
-    private ArrayList<Contato> contato;    
+    private ArrayList<Endereco> end;
+    private ArrayList<Contato> cont;
 
     public String getIdCliente() {
         return idCliente;
@@ -17,13 +19,13 @@ public class Cliente extends Pessoa {
         }
         throw new IllegalArgumentException("id do cliente invalido");
     }
-    
-    public ArrayList<Endereco> getEndereco() {
-        return endereco;
-    }
 
-    public ArrayList<Contato> getContato() {
-        return contato;
+    public ArrayList<Endereco> getEnd() {
+        return end;
+    }    
+
+    public ArrayList getCont() {
+        return cont;
     }
 
     public String getIdMesa() {

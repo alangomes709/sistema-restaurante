@@ -1,3 +1,5 @@
+package br.edu.ifba.sistema_restaurante;
+
 public class MetodoPagamento {
     private String metodoPagamento;
     private String descricao;

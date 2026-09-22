@@ -1,3 +1,5 @@
+package br.edu.ifba.sistema_restaurante;
+
 public class Endereco {
     private String idEndereco;
     private String rua;

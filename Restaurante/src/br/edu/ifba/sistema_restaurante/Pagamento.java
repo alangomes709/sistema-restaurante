@@ -1,12 +1,10 @@
-
-import java.util.ArrayList;
+package br.edu.ifba.sistema_restaurante;
 
 public class Pagamento {
     private String idPagamento;
     private double taxaServico;
     private double total;
-    private ArrayList<Comanda> comanda;
-    private ArrayList<MetodoPagamento> metPag;
+    private MetodoPagamento metPag;
 
     public String getIdPagamento() {
         return idPagamento;
@@ -44,11 +42,12 @@ public class Pagamento {
         throw new IllegalArgumentException("total invalido");
     }
 
-    public ArrayList<Comanda> getComanda() {
-        return comanda;
+    public MetodoPagamento getMetPag() {
+        return metPag;
     }
 
-    public ArrayList<MetodoPagamento> getMetPag() {
-        return metPag;
-    }   
+    public void setMetPag(MetodoPagamento metPag) {
+        this.metPag = metPag;
+    }
+    
 }

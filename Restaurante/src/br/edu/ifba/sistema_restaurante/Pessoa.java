@@ -1,3 +1,5 @@
+package br.edu.ifba.sistema_restaurante;
+
 public class Pessoa {
     private String nome;
     private String cpf;

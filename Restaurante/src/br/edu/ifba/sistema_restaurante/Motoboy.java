@@ -1,3 +1,5 @@
+package br.edu.ifba.sistema_restaurante;
+
 public class Motoboy extends Pessoa {
     private String idMotoboy;
 

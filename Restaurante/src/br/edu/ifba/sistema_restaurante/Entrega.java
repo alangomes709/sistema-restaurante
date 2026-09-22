@@ -1,9 +1,7 @@
+package br.edu.ifba.sistema_restaurante;
 
-import java.util.ArrayList;
-
-public class Entrega {
-    private String idEntrega;
-    private ArrayList<Endereco> enderecoDest;
+public class Entrega extends Endereco {
+    private String idEntrega;    
 
     public String getIdEntrega() {
         return idEntrega;
@@ -15,9 +13,5 @@ public class Entrega {
             
         }
         throw new IllegalArgumentException("id da entrega invalido");
-    }
-
-    public ArrayList<Endereco> getEnderecoDest() {
-        return enderecoDest;
-    }   
+    }    
 }

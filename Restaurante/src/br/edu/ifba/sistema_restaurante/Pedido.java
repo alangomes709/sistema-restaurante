@@ -1,10 +1,19 @@
+package br.edu.ifba.sistema_restaurante;
+
 
 import java.util.ArrayList;
 
 public class Pedido {
     private String idPedido;
     private int quantidadeSolicitada;
+    
     private ArrayList<Produtos> produto;
+//    private Produtos prod;
+    // criar getter e setter caso fique assim
+
+    public ArrayList<Produtos> getProduto() {
+        return produto;
+    }
 
     public String getIdPedido() {
         return idPedido;
@@ -28,10 +37,6 @@ public class Pedido {
             
         }
         throw new IllegalArgumentException("quantidade invalida");
-    }
-
-    public ArrayList<Produtos> getProduto() {
-        return produto;
     }
 
 }
