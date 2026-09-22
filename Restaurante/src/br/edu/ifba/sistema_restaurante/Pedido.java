@@ -7,6 +7,12 @@ public class Pedido {
     private int quantidadeSolicitada;
     private ArrayList<Produtos> produto;
 
+    public Pedido(String idPedido, int quantidadeSolicitada) {
+        this.idPedido = idPedido;
+        this.quantidadeSolicitada = quantidadeSolicitada;
+        this.produto = new ArrayList<>();
+    }
+       
     public ArrayList<Produtos> getProduto() {
         return produto;
     }
