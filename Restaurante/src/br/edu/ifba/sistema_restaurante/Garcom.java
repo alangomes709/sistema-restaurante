@@ -8,11 +8,13 @@ public class Garcom extends Pessoa {
     }
 
     public void setIdGarcom(String idGarcom) {
-        if (idGarcom.isEmpty()==false || this.idGarcom != null){
+        if (idGarcom != null && idGarcom.trim().isEmpty()==false ){
         this.idGarcom = idGarcom;
             
-        }
+        }else{
         throw new IllegalArgumentException("id do garçom invalido");
+            
+        }
     }
     
 }

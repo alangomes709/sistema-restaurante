@@ -11,11 +11,13 @@ public class Produtos {
     }
 
     public void setIdProduto(String idProduto) {
-        if (idProduto.isEmpty()==false || this.idProduto!=null){
+        if (idProduto != null && idProduto.trim().isEmpty() == false ){
         this.idProduto = idProduto;
             
-        }
+        }else{
         throw new IllegalArgumentException("id do produto invalido");
+            
+        }
     }
 
     public String getDescricao() {
@@ -23,11 +25,11 @@ public class Produtos {
     }
 
     public void setDescricao(String descricao) {
-        if (descricao.isEmpty()==false || this.descricao!=null);{
+        if (descricao != null && descricao.trim().isEmpty() == false);{
         this.descricao = descricao;
         
     }
-        throw new IllegalArgumentException("descrição invalida");
+        throw new IllegalArgumentException("descrição invalida");       
     }
 
     public double getPrecoUnitario() {
@@ -35,11 +37,13 @@ public class Produtos {
     }
 
     public void setPrecoUnitario(double precoUnitario) {
-        if (this.precoUnitario >= 0){
+        if (precoUnitario >= 0){
         this.precoUnitario = precoUnitario;
             
-        }
+        }else{
         throw new IllegalArgumentException("preço invalido");
+            
+        }
     }
 
     public int getQuantidadeDisponivel() {
@@ -47,10 +51,12 @@ public class Produtos {
     }
 
     public void setQuantidadeDisponivel(int quantidadeDisponivel) {
-        if (this.quantidadeDisponivel >= 0){
+        if (quantidadeDisponivel >= 0){
         this.quantidadeDisponivel = quantidadeDisponivel;
             
-        }
+        }else{
         throw new IllegalArgumentException("quantidade invalida");
+            
+        }
     }  
 }

@@ -12,10 +12,12 @@ public class Pessoa {
     }
 
     public void setNome(String nome) {
-        if (nome.isEmpty()==false || this.nome!=null) {
+        if (nome != null && nome.trim().isEmpty() == false ) {
             this.nome = nome;
-        }
+        }else{
         throw new IllegalArgumentException("O nome não pode ser vazio.");                
+            
+        }
     }
 
     public String getCpf() {        
@@ -23,10 +25,12 @@ public class Pessoa {
     }
 
     public void setCpf(String cpf) {
-        if (cpf.isEmpty()==false || this.cpf!=null && this.cpf.length()==11){
+        if (cpf != null && cpf.isEmpty() == false && cpf.length() == 11){
         this.cpf = cpf;  
-        }
+        }else{
         throw new IllegalArgumentException("CPF invalido");
+            
+        }
     }
 }
     

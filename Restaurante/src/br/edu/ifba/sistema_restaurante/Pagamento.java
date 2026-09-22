@@ -11,11 +11,13 @@ public class Pagamento {
     }
 
     public void setIdPagamento(String idPagamento) {
-        if (idPagamento.isEmpty()==false || this.idPagamento!=null){
+        if (idPagamento != null && idPagamento.trim().isEmpty() == false ){
         this.idPagamento = idPagamento;
             
-        }
+        }else{
         throw new IllegalArgumentException("id do pagamento invalido");
+            
+        }
     }
 
     public double getTaxaServico() {
@@ -23,7 +25,7 @@ public class Pagamento {
     }
 
     public void setTaxaServico(double taxaServico) {
-        if (this.taxaServico >= 0){
+        if (taxaServico >= 0){
         this.taxaServico = taxaServico;
             
         }
@@ -35,7 +37,7 @@ public class Pagamento {
     }
 
     public void setTotal(double total) {
-        if (this.total >= 0){
+        if (total >= 0){
         this.total = total;
             
         }

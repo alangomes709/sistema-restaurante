@@ -9,10 +9,12 @@ public class Contato {
     }
 
     public void setTelefone(String telefone) {
-        if (telefone.isEmpty()==false || this.telefone!=null && this.telefone.length()==11){
+        if (telefone != null && telefone.trim().isEmpty() == false && telefone.length() == 11){
             this.telefone = telefone;            
-        }
+        }else{
         throw new IllegalArgumentException("numero invalido");
+            
+        }
     }
 
     public String getEmail() {
@@ -20,10 +22,12 @@ public class Contato {
     }
 
     public void setEmail(String email) {
-        if (email.isEmpty()==false || this.email!=null && this.email.contains("@")){
+        if (email != null && email.trim().isEmpty() == false && email.contains("@")){
             this.email = email;            
-        }
+        }else{
         throw new IllegalArgumentException("email invalido");
+            
+        }
     }
     
 }

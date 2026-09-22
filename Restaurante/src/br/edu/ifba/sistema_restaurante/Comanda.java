@@ -15,11 +15,12 @@ public class Comanda {
     }
 
     public void setIdComanda(String idComanda) {
-        if (idComanda.isEmpty()==false || this.idComanda!=null){
+        if (idComanda != null && idComanda.trim().isEmpty() == false){
         this.idComanda = idComanda;
-            
-        }
+        
+        }else{    
         throw new IllegalArgumentException("id da comanda invalido");
+        }
     }
 
     public boolean isStatus() {
@@ -35,11 +36,13 @@ public class Comanda {
     }
 
     public void setData(String data) {
-        if (data.isEmpty()==false || this.data!=null){
+        if (data != null && data.trim().isEmpty() == false){
         this.data = data;
             
-        }
+        }else{
         throw new IllegalArgumentException("data invalida");
+            
+        }
     }
 
     public Cliente getCliente() {
@@ -47,7 +50,9 @@ public class Comanda {
     }
 
     public void setCliente(Cliente cliente) {
+       
         this.cliente = cliente;
+                
     }
 
     public Garcom getGarcom() {
@@ -55,7 +60,9 @@ public class Comanda {
     }
 
     public void setGarcom(Garcom garcom) {
+      
         this.garcom = garcom;
+            
     }
 
     public Pedido getPedido() {

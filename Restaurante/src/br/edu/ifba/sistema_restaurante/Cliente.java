@@ -14,10 +14,12 @@ public class Cliente extends Pessoa {
     }
 
     public void setIdCliente(String idCliente) {
-        if (idCliente.isEmpty()==false || this.idCliente!=null){
+        if (idCliente != null && idCliente.trim().isEmpty() == false ){
         this.idCliente = idCliente;        
-        }
+        }else{
         throw new IllegalArgumentException("id do cliente invalido");
+            
+        }
     }
 
     public ArrayList<Endereco> getEnd() {
@@ -33,10 +35,12 @@ public class Cliente extends Pessoa {
     }
 
     public void setIdMesa(String idMesa) {
-        if (idMesa.isEmpty()==false || this.idMesa != null){
+        if (idMesa != null && idMesa.trim().isEmpty() == false ){
         this.idMesa = idMesa;
             
-        }
+        }else{
         throw new IllegalArgumentException("id da mesa invalido");
+            
+        }
     }   
 }

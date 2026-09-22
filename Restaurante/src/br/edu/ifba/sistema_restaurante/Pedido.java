@@ -20,11 +20,13 @@ public class Pedido {
     }
 
     public void setIdPedido(String idPedido) {
-        if (idPedido.isEmpty()==false || this.idPedido!=null){
+        if (idPedido != null && idPedido.trim().isEmpty() == false){
         this.idPedido = idPedido;
             
-        }
+        }else{
         throw new IllegalArgumentException("id do pedido invalido");
+            
+        }
     }
 
     public int getQuantidadeSolicitada() {
@@ -32,11 +34,13 @@ public class Pedido {
     }
 
     public void setQuantidadeSolicitada(int quantidadeSolicitada) {
-        if (this.quantidadeSolicitada >= 0){
+        if (quantidadeSolicitada >= 0){
         this.quantidadeSolicitada = quantidadeSolicitada;
             
-        }
+        }else{
         throw new IllegalArgumentException("quantidade invalida");
+            
+        }
     }
 
 }

@@ -10,11 +10,13 @@ public class MetodoPagamento {
     }
 
     public void setMetodoPagamento(String metodoPagamento) {
-        if (metodoPagamento.isEmpty()==false || this.metodoPagamento!=null){
+        if (metodoPagamento != null && metodoPagamento.trim().isEmpty() == false ){
         this.metodoPagamento = metodoPagamento;
             
-        }
+        }else{
         throw new IllegalArgumentException("metodo de pagamento invalido");
+            
+        }
     }
 
     public String getDescricao() {
@@ -22,11 +24,13 @@ public class MetodoPagamento {
     }
 
     public void setDescricao(String descricao) {
-        if (descricao.isEmpty()==false || this.descricao!=null){
+        if (descricao != null && descricao.trim().isEmpty() == false ){
         this.descricao = descricao;
             
-        }
+        }else{
         throw new IllegalArgumentException("descrição invalida");
+            
+        }
     }
 
     public double getTaxa() {
@@ -37,7 +41,9 @@ public class MetodoPagamento {
         if (this.taxa > 0 ){
         this.taxa = taxa;
             
-        }
+        }else{
         throw new IllegalArgumentException("taxa invalida");
+            
+        }
     }  
 }
