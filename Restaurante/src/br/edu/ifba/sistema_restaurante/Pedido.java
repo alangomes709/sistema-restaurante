@@ -41,7 +41,6 @@ public class Pedido {
         }
     }
     
-    
     public void adicionarProduto(Produtos produto) {
         if (produto != null) {
             this.produto.add(produto);

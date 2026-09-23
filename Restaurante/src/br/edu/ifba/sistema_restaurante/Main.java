@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         
+        try {
         // CLIENTE
       
         Cliente cliente = new Cliente(
@@ -118,7 +119,7 @@ public class Main {
                 entrega,
                 pagamento
         );
-
+        
         // ==========================================
         // EXIBIÇÃO DOS OBJETOS
         // ==========================================
@@ -196,7 +197,9 @@ public class Main {
                 + comanda.getEntrega().getIdEntrega());
         System.out.println("Pagamento: "
                 + comanda.getPagamento().getIdPagamento());
-        
+        } catch (IllegalArgumentException e){
+            System.out.println("ERRO: "+ e.getMessage());
+        }
         
     }
 }
