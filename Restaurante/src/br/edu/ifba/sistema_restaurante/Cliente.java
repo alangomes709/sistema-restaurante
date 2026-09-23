@@ -20,12 +20,6 @@ public class Cliente extends Pessoa {
         this.end = new ArrayList<>();
     }
 
-    public Cliente(String idCliente, ArrayList<Endereco> end, String nome, String cpf) {
-        super(nome, cpf);        
-        setIdCliente(idCliente);
-        this.end = new ArrayList<>();        
-    }        
-
     public Cliente(String idCliente, String idMesa) {
         setIdCliente(idCliente);
         setIdMesa(idMesa);
@@ -71,5 +65,19 @@ public class Cliente extends Pessoa {
         }else{
             this.idMesa = "";            //opcional
         }
-    }   
+    }  
+          public void adicionarContato(Contato contato) {
+        if (cont != null) {
+            this.cont.add(contato);
+            this.cont=new ArrayList<>();
+        }
+    }
+          
+          
+    public void adicionarEndereco(Endereco endereco) {
+        if (end != null) {
+            this.end.add(endereco);
+            this.end=new ArrayList<>();
+        }
+    }
 }
