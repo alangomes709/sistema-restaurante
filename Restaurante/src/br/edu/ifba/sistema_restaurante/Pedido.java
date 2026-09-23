@@ -40,5 +40,13 @@ public class Pedido {
             throw new IllegalArgumentException("Quantidade tem que ser maior que 0.");
         }
     }
+    
+    
+    public void adicionarProduto(Produtos produto) {
+        if (produto != null) {
+            this.produto.add(produto);
+            this.produto=new ArrayList<>();
+        }
+    }
 
 }
