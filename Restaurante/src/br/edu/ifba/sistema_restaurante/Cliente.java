@@ -69,7 +69,7 @@ public class Cliente extends Pessoa {
         if (idMesa != null && idMesa.trim().isEmpty() == false ){
             this.idMesa = idMesa;            
         }else{
-            throw new IllegalArgumentException("Id da mesa não pode ser nulo.");            
+            this.idMesa = "";            //opcional
         }
     }   
 }
