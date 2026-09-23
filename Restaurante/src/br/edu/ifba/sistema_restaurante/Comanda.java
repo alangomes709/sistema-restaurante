@@ -83,8 +83,11 @@ public class Comanda {
     }
 
     public void setGarcom(Garcom garcom) {
-        
+        if (garcom != null){
             this.garcom = garcom; //garcom nulo em delivery
+        }else{
+            this.garcom = null; 
+        }
                  
     }
 
@@ -105,8 +108,11 @@ public class Comanda {
     }
 
     public void setEntrega(Entrega entrega) {
-        
-            this.entrega = entrega;  //tambem opcional              
+        if (entrega != null){
+            this.entrega = entrega;  //tambem opcional             
+        }else{
+            this.entrega = null;
+        }
                
     }
 
@@ -115,8 +121,11 @@ public class Comanda {
     }
 
     public void setPagamento(Pagamento pagamento) {
-        
+        if (status == false){
             this.pagamento = pagamento;  //opcional enquanto tiver aberta
+        }else{
+            this.pagamento = null;
+        }
             
     } 
 }
