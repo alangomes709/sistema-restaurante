@@ -21,7 +21,7 @@ public class Motoboy extends Pessoa {
         if (idMotoboy != null && idMotoboy.trim().isEmpty() == false ){
             this.idMotoboy = idMotoboy;            
         }else{
-            throw new IllegalArgumentException("id do motoboy invalido");            
+            throw new IllegalArgumentException("Id do motoboy não pode ser nulo.");            
         }
     }   
     

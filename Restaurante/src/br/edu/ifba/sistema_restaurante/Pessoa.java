@@ -32,7 +32,7 @@ public class Pessoa {
         if (cpf != null && cpf.isEmpty() == false && cpf.length() == 11){
             this.cpf = cpf;  
         }else{
-            throw new IllegalArgumentException("CPF deve ter somente numeros e 11 caracteres");
+            throw new IllegalArgumentException("CPF não pode ser nulo, deve ter somente numeros e 11 caracteres.");
         }
     }
 }

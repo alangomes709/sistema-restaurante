@@ -19,7 +19,7 @@ public class MetodoPagamento {
         if (metodoPagamento != null && metodoPagamento.trim().isEmpty() == false ){
             this.metodoPagamento = metodoPagamento;            
         }else{
-            throw new IllegalArgumentException("metodo de pagamento invalido");            
+            throw new IllegalArgumentException("Metodo de pagamento não pode ser nulo.");            
         }
     }
 
@@ -31,7 +31,7 @@ public class MetodoPagamento {
         if (descricao != null && descricao.trim().isEmpty() == false ){
             this.descricao = descricao;            
         }else{
-            throw new IllegalArgumentException("descrição invalida");
+            throw new IllegalArgumentException("Descrição não pode ser nula.");
         }
     }
 
@@ -43,7 +43,7 @@ public class MetodoPagamento {
         if (taxa > 0 ){
             this.taxa = taxa;
         }else{
-            throw new IllegalArgumentException("taxa invalida");
+            throw new IllegalArgumentException("Taxa não pode ser nula.");
         }
     }  
 }

@@ -22,7 +22,7 @@ public class Pagamento {
         if (idPagamento != null && idPagamento.trim().isEmpty() == false ){
             this.idPagamento = idPagamento;            
         }else{
-            throw new IllegalArgumentException("id do pagamento invalido");
+            throw new IllegalArgumentException("Id do pagamento não pode ser nulo.");
         }
     }
 
@@ -34,8 +34,10 @@ public class Pagamento {
         if (taxaServico >= 0){
         this.taxaServico = taxaServico;
             
+        }else{
+        throw new IllegalArgumentException("Taxa de serviço tem que ser maior ou igual a 0.");
+            
         }
-        throw new IllegalArgumentException("taxa de serviço invalida");
     }
 
     public MetodoPagamento getMetPag() {

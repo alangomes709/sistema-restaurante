@@ -25,7 +25,7 @@ public class Entrega extends Endereco {
         if (idEntrega != null && idEntrega.trim().isEmpty() == false ){
             this.idEntrega = idEntrega;
         }else{
-            throw new IllegalArgumentException("id da entrega invalido");
+            throw new IllegalArgumentException("Id da entrega não pode ser nulo.");
         }
     }    
 }

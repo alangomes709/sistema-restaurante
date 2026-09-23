@@ -41,7 +41,7 @@ public class Comanda {
         if (idComanda != null && idComanda.trim().isEmpty() == false){
             this.idComanda = idComanda;        
         }else{    
-            throw new IllegalArgumentException("id da comanda invalido");
+            throw new IllegalArgumentException("Id da comanda não pode ser nulo.");
         }
     }
 
@@ -61,7 +61,7 @@ public class Comanda {
         if (data != null && data.trim().isEmpty() == false){
             this.data = data;            
         }else{
-            throw new IllegalArgumentException("data invalida");            
+            throw new IllegalArgumentException("Data não pode ser nula.");            
         }
     }
 

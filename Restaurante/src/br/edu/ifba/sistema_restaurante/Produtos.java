@@ -24,7 +24,7 @@ public class Produtos {
         if (idProduto != null && idProduto.trim().isEmpty() == false ){
             this.idProduto = idProduto;
         }else{
-            throw new IllegalArgumentException("id do produto invalido");
+            throw new IllegalArgumentException("Id do produto não pode ser nulo.");
         }
     }
 
@@ -36,7 +36,7 @@ public class Produtos {
         if (descricao != null && descricao.trim().isEmpty() == false){
             this.descricao = descricao;        
         } else {
-            throw new IllegalArgumentException("descrição invalida");       
+            throw new IllegalArgumentException("Descrição não pode ser nula.");       
         }
     }
 
@@ -45,10 +45,10 @@ public class Produtos {
     }
 
     public void setPrecoUnitario(double precoUnitario) {
-        if (precoUnitario > 0){
+        if (precoUnitario >= 0){
             this.precoUnitario = precoUnitario;        
         }else{
-            throw new IllegalArgumentException("preço invalido");
+            throw new IllegalArgumentException("Preço tem que ser maior ou igual a 0.");
         }
     }
 
@@ -60,7 +60,7 @@ public class Produtos {
         if (quantidadeDisponivel >= 0){
             this.quantidadeDisponivel = quantidadeDisponivel;
         }else{
-            throw new IllegalArgumentException("quantidade invalida");
+            throw new IllegalArgumentException("Quantidade tem que ser maior ou igual a 0.");
         }
     }  
 }

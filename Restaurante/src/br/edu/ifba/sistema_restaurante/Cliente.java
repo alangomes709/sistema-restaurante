@@ -49,7 +49,7 @@ public class Cliente extends Pessoa {
         if (idCliente != null && idCliente.trim().isEmpty() == false ){
             this.idCliente = idCliente;        
         }else{
-            throw new IllegalArgumentException("id do cliente invalido");            
+            throw new IllegalArgumentException("Id do cliente não pode ser nulo.");            
         }
     }
 
@@ -69,7 +69,7 @@ public class Cliente extends Pessoa {
         if (idMesa != null && idMesa.trim().isEmpty() == false ){
             this.idMesa = idMesa;            
         }else{
-            throw new IllegalArgumentException("id da mesa invalido");            
+            throw new IllegalArgumentException("Id da mesa não pode ser nulo.");            
         }
     }   
 }
