@@ -13,11 +13,13 @@ public class Cliente extends Pessoa {
         super(nome, cpf);
         setIdCliente(idCliente);
         this.end = new ArrayList<>();
+        this.cont = new ArrayList<>(); 
     }
 
     public Cliente(String idCliente) {
         setIdCliente(idCliente);
         this.end = new ArrayList<>();
+        this.cont = new ArrayList<>(); 
     }
 
     public Cliente(String idCliente, String idMesa) {
