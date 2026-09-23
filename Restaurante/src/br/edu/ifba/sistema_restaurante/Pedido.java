@@ -34,10 +34,10 @@ public class Pedido {
     }
 
     public void setQuantidadeSolicitada(int quantidadeSolicitada) {
-        if (quantidadeSolicitada >= 0){
+        if (quantidadeSolicitada > 0){
             this.quantidadeSolicitada = quantidadeSolicitada;
         }else{
-            throw new IllegalArgumentException("Quantidade tem que ser maior ou igual a 0.");
+            throw new IllegalArgumentException("Quantidade tem que ser maior que 0.");
         }
     }
 

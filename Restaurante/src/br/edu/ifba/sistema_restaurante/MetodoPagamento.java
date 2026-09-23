@@ -40,10 +40,10 @@ public class MetodoPagamento {
     }
 
     public void setTaxa(double taxa) {
-        if (taxa > 0 ){
+        if (taxa >= 0 ){
             this.taxa = taxa;
         }else{
-            throw new IllegalArgumentException("Taxa não pode ser nula.");
+            throw new IllegalArgumentException("Taxa não pode ser menor que 0.");
         }
     }  
 }

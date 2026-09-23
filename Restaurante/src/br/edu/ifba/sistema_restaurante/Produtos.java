@@ -45,10 +45,10 @@ public class Produtos {
     }
 
     public void setPrecoUnitario(double precoUnitario) {
-        if (precoUnitario >= 0){
+        if (precoUnitario > 0){
             this.precoUnitario = precoUnitario;        
         }else{
-            throw new IllegalArgumentException("Preço tem que ser maior ou igual a 0.");
+            throw new IllegalArgumentException("Preço tem que ser maior que 0.");
         }
     }
 

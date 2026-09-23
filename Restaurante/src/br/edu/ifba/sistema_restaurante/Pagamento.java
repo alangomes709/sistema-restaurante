@@ -45,7 +45,11 @@ public class Pagamento {
     }
 
     public void setMetPag(MetodoPagamento metPag) {
+        if (metPag != null) {
         this.metPag = metPag;
+    } else {
+        throw new IllegalArgumentException("Método de pagamento não pode ser nulo.");
+    }
     }
     
 }
