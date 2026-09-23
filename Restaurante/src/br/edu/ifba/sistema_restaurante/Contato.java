@@ -4,6 +4,11 @@ public class Contato {
     private String telefone;
     private String email;
 
+    public Contato(String telefone, String email) {
+        setTelefone(telefone);
+        setEmail(email);
+    }
+       
     public String getTelefone() {
         return telefone;
     }

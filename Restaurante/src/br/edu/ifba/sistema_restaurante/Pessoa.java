@@ -8,9 +8,9 @@ public class Pessoa {
     }
     
     public Pessoa(String nome, String cpf) {
-        this.nome = nome;
-        this.cpf = cpf;
-    }       
+        setNome(nome);
+        setCpf(cpf);
+    }
 
     public String getNome() {
         return nome;
@@ -32,7 +32,7 @@ public class Pessoa {
         if (cpf != null && cpf.isEmpty() == false && cpf.length() == 11){
             this.cpf = cpf;  
         }else{
-            throw new IllegalArgumentException("CPF invalido");
+            throw new IllegalArgumentException("CPF deve ter somente numeros e 11 caracteres");
         }
     }
 }

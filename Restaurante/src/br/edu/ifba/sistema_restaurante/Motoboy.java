@@ -4,7 +4,7 @@ public class Motoboy extends Pessoa {
     private String idMotoboy;    
 
     public Motoboy(String idMotoboy) {
-        this.idMotoboy = idMotoboy;
+        setIdMotoboy(idMotoboy);
     }
 
     public Motoboy(String idMotoboy, String nome, String cpf) {
@@ -13,7 +13,6 @@ public class Motoboy extends Pessoa {
     }
     
     
-
     public String getIdMotoboy() {
         return idMotoboy;
     }

@@ -8,6 +8,31 @@ public class Endereco {
     private String complemento;
     private int numCasa;
 
+    public Endereco() {
+    }
+
+    
+    public Endereco(String idEndereco, String rua, String cep, String bairro, int numCasa) {
+        setIdEndereco(idEndereco);
+        setRua(rua);
+        setCep(cep);
+        setBairro(bairro);
+        setNumCasa(numCasa);
+    }
+    
+    
+
+    public Endereco(String idEndereco, String rua, String cep, String bairro, String complemento, int numCasa) {
+        setIdEndereco(idEndereco);
+        setRua(rua);
+        setCep(cep);
+        setBairro(bairro);
+        setComplemento(complemento);
+        setNumCasa(numCasa);
+    }
+    
+    
+
     public String getIdEndereco() {
         return idEndereco;
     }

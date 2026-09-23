@@ -7,8 +7,39 @@ public class Cliente extends Pessoa {
     private String idCliente;
     private String idMesa;
     private ArrayList<Endereco> end;
-    private ArrayList<Contato>cont;
-        
+    private ArrayList<Contato> cont;
+
+    public Cliente(String idCliente, String nome, String cpf) {
+        super(nome, cpf);
+        setIdCliente(idCliente);
+        this.end = new ArrayList<>();
+    }
+
+    public Cliente(String idCliente) {
+        setIdCliente(idCliente);
+        this.end = new ArrayList<>();
+    }
+
+    public Cliente(String idCliente, ArrayList<Endereco> end, String nome, String cpf) {
+        super(nome, cpf);        
+        setIdCliente(idCliente);
+        this.end = new ArrayList<>();        
+    }        
+
+    public Cliente(String idCliente, String idMesa) {
+        setIdCliente(idCliente);
+        setIdMesa(idMesa);
+        this.end = new ArrayList<>();
+        this.cont = new ArrayList<>(); 
+    }
+
+    public Cliente(String idCliente, String idMesa, String nome, String cpf) {
+        super(nome, cpf);
+        setIdCliente(idCliente);
+        setIdMesa(idMesa);
+        this.end = new ArrayList<>(); 
+        this.cont = new ArrayList<>(); 
+    }                
 
     public String getIdCliente() {
         return idCliente;
@@ -25,27 +56,11 @@ public class Cliente extends Pessoa {
     public ArrayList<Endereco> getEnd() {
         return end;
     }    
-
-    public void adicionarEndereco(Endereco endreco) {
-        if (end != null) {
-            this.end.add(endreco);
-            this.end=new ArrayList<>();
-        }
-    }
     
     public ArrayList getCont() {
         return cont;
     }
-    
-      public void adicionarEndereco(Contato contato) {
-        if (cont != null) {
-            this.cont.add(contato);
-            this.cont=new ArrayList<>();
-        }
-    }
-    
-    
-
+ 
     public String getIdMesa() {
         return idMesa;
     }

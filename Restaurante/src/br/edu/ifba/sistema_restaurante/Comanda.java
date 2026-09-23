@@ -10,6 +10,29 @@ public class Comanda {
     private Entrega entrega;
     private Pagamento pagamento;
 
+    public Comanda(String idComanda, boolean status, String data, Cliente cliente, Garcom garcom, Pedido pedido, Pagamento pagamento) {
+        setIdComanda(idComanda);
+        setStatus(status);
+        setData(data);
+        setCliente(cliente);
+        setGarcom(garcom);
+        setPedido(pedido);       
+        setPagamento(pagamento);
+    }
+    
+    public Comanda(String idComanda, boolean status, String data, Cliente cliente, Garcom garcom, Pedido pedido, Entrega entrega, Pagamento pagamento) {
+        setIdComanda(idComanda);
+        setStatus(status);
+        setData(data);
+        setCliente(cliente);
+        setGarcom(garcom);
+        setPedido(pedido);
+        setEntrega(entrega);
+        setPagamento(pagamento);
+    }
+    
+    
+
     public String getIdComanda() {
         return idComanda;
     }

@@ -9,9 +9,9 @@ public class Pagamento {
     }
     
     public Pagamento(String idPagamento, double taxaServico, MetodoPagamento metPag) {
-        this.idPagamento = idPagamento;
-        this.taxaServico = taxaServico;
-        this.metPag = metPag;
+        setIdPagamento(idPagamento);
+        setTaxaServico(taxaServico);
+        setMetPag(metPag);
     }        
 
     public String getIdPagamento() {
