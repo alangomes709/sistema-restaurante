@@ -5,6 +5,12 @@ public class MetodoPagamento {
     private String descricao;
     private double taxa;
 
+    public MetodoPagamento(String metodoPagamento, String descricao, double taxa) {
+        setMetodoPagamento(metodoPagamento);
+        setDescricao(descricao);
+        setTaxa(taxa);
+    }
+    
     public String getMetodoPagamento() {
         return metodoPagamento;
     }

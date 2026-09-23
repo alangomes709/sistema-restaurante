@@ -6,6 +6,16 @@ public class Produtos {
     private double precoUnitario;
     private int quantidadeDisponivel;
 
+    public Produtos() {
+    }
+
+    public Produtos(String idProduto, String descricao, double precoUnitario, int quantidadeDisponivel) {
+        setIdProduto(idProduto);
+        setDescricao(descricao);
+        setPrecoUnitario(precoUnitario);
+        setQuantidadeDisponivel(quantidadeDisponivel);
+    }
+    
     public String getIdProduto() {
         return idProduto;
     }

@@ -5,6 +5,15 @@ public class Pagamento {
     private double taxaServico;    
     private MetodoPagamento metPag;
 
+    public Pagamento() {
+    }
+    
+    public Pagamento(String idPagamento, double taxaServico, MetodoPagamento metPag) {
+        this.idPagamento = idPagamento;
+        this.taxaServico = taxaServico;
+        this.metPag = metPag;
+    }        
+
     public String getIdPagamento() {
         return idPagamento;
     }
@@ -13,8 +22,7 @@ public class Pagamento {
         if (idPagamento != null && idPagamento.trim().isEmpty() == false ){
             this.idPagamento = idPagamento;            
         }else{
-        throw new IllegalArgumentException("id do pagamento invalido");
-            
+            throw new IllegalArgumentException("id do pagamento invalido");
         }
     }
 
