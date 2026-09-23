@@ -29,11 +29,9 @@ public class MetodoPagamento {
 
     public void setDescricao(String descricao) {
         if (descricao != null && descricao.trim().isEmpty() == false ){
-        this.descricao = descricao;
-            
+            this.descricao = descricao;            
         }else{
-        throw new IllegalArgumentException("descrição invalida");
-            
+            throw new IllegalArgumentException("descrição invalida");
         }
     }
 
@@ -42,12 +40,10 @@ public class MetodoPagamento {
     }
 
     public void setTaxa(double taxa) {
-        if (this.taxa > 0 ){
-        this.taxa = taxa;
-            
+        if (taxa > 0 ){
+            this.taxa = taxa;
         }else{
-        throw new IllegalArgumentException("taxa invalida");
-            
+            throw new IllegalArgumentException("taxa invalida");
         }
     }  
 }

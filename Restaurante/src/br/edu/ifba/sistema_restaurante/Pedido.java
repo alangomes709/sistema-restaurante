@@ -8,8 +8,8 @@ public class Pedido {
     private ArrayList<Produtos> produto;
 
     public Pedido(String idPedido, int quantidadeSolicitada) {
-        this.idPedido = idPedido;
-        this.quantidadeSolicitada = quantidadeSolicitada;
+        setIdPedido(idPedido);
+        setQuantidadeSolicitada(quantidadeSolicitada);
         this.produto = new ArrayList<>();
     }
        
