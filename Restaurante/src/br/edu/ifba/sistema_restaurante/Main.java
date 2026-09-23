@@ -54,9 +54,9 @@ public class Main {
                 "12345678922"
         );
 
-        // ==========================================
+        
         // PRODUTO
-        // ==========================================
+        
         Produtos produto = new Produtos(
                 "P1",
                 "Hambúrguer",
@@ -64,9 +64,9 @@ public class Main {
                 50
         );
 
-        // ==========================================
+        
         // PEDIDO
-        // ==========================================
+        
         Pedido pedido = new Pedido(
                 "PED1",
                 2
@@ -74,28 +74,25 @@ public class Main {
 
         // Adicionando produto ao pedido
         pedido.getProduto().add(produto);
-
-        // ==========================================
+        
         // MÉTODO DE PAGAMENTO
-        // ==========================================
+        
         MetodoPagamento metodoPagamento = new MetodoPagamento(
                 "PIX",
                 "Pagamento via PIX",
                 0.0
         );
 
-        // ==========================================
         // PAGAMENTO
-        // ==========================================
+        
         Pagamento pagamento = new Pagamento(
                 "PG1",
                 10.0,
                 metodoPagamento
         );
 
-        // ==========================================
         // ENTREGA
-        // ==========================================
+        
         Entrega entrega = new Entrega(
                 "ENT1",
                 "E2",
@@ -106,9 +103,8 @@ public class Main {
                 100
         );
 
-        // ==========================================
         // COMANDA
-        // ==========================================
+        
         Comanda comanda = new Comanda(
                 "COM1",
                 false,
@@ -120,9 +116,7 @@ public class Main {
                 pagamento
         );
         
-        // ==========================================
         // EXIBIÇÃO DOS OBJETOS
-        // ==========================================
 
         System.out.println("===== CLIENTE =====");
         System.out.println("ID: " + cliente.getIdCliente());
