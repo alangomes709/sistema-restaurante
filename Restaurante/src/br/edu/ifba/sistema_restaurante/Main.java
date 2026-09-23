@@ -9,112 +9,54 @@ public class Main {
         try {
         // CLIENTE
       
-        Cliente cliente = new Cliente(
-                "C1",
-                "Florisvaldo",
-                "12345678911"
-        );
+        Cliente cliente = new Cliente("C1","Cleber","32942234324");
 
         // ENDEREÇO
         
-        Endereco endereco = new Endereco(
-                "E1",
-                "Rua HAMBUR",
-                "44444444",
-                "NOA",
-                45
-        );
+        Endereco endereco = new Endereco("E1","Rua Rosas Vermelhas","98730000","Campim Florido",65);
 
         cliente.adicionarEndereco(endereco);
-
         
         // CONTATO
         
-        Contato contato = new Contato(
-                "71999999999",
-                "florisvaldo@gmail.com"
-        );
+        Contato contato = new Contato("74999678954","clebin@gmail.com");
         cliente.adicionarContato(contato);
-
         
         // MOTOBÓY
         
-        Motoboy motoboy = new Motoboy(
-                "MT12",
-                "Francis",
-                "56732145582"
-        );
-
+        Motoboy motoboy = new Motoboy("MT12","Francis","56732145582");
         
         // GARÇOM
          
-        Garcom garcom = new Garcom(
-                "G1",
-                "Carlos",
-                "12345678922"
-        );
-
+        Garcom garcom = new Garcom("G1","Geraldo Junior","12345678901");
         
         // PRODUTO
         
-        Produtos produto = new Produtos(
-                "P1",
-                "Hambúrguer",
-                25.00,
-                50
-        );
-
+        Produtos produto = new Produtos("T1","Bebida",8.00,50);
         
         // PEDIDO
         
-        Pedido pedido = new Pedido(
-                "PED1",
-                2
-        );
+        Pedido pedido = new Pedido("PD1",5);
 
         // Adicionando produto ao pedido
+        
         pedido.getProduto().add(produto);
         
         // MÉTODO DE PAGAMENTO
         
-        MetodoPagamento metodoPagamento = new MetodoPagamento(
-                "PIX",
-                "Pagamento via PIX",
-                0.0
-        );
+        MetodoPagamento metodoPagamento = new MetodoPagamento("PIX","Pagamento via PIX",0.0);
 
         // PAGAMENTO
         
-        Pagamento pagamento = new Pagamento(
-                "PG1",
-                10.0,
-                metodoPagamento
-        );
+        Pagamento pagamento = new Pagamento("PG1",10.0,metodoPagamento);
 
         // ENTREGA
         
-        Entrega entrega = new Entrega(
-                "ENT1",
-                "E2",
-                "Rua da Entrega",
-                "40000000",
-                "Centro",
-                "Casa azul",
-                100
-        );
+        Entrega entrega = new Entrega( "ET1","E1","Rua Rosas Vermelhas","98730000","Capim Florido","Casa",65);
 
         // COMANDA
         
-        Comanda comanda = new Comanda(
-                "COM1",
-                false,
-                "23/09/2026",
-                cliente,
-                garcom,
-                pedido,
-                entrega,
-                pagamento
-        );
+        Comanda comanda = new Comanda("COM1",false,"24/05/2025",cliente,garcom,pedido,entrega,pagamento);
         
         // EXIBIÇÃO DOS OBJETOS
 
