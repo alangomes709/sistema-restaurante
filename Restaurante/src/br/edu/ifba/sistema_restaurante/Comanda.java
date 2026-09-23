@@ -32,7 +32,6 @@ public class Comanda {
     }
     
     
-
     public String getIdComanda() {
         return idComanda;
     }
