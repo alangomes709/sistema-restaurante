@@ -7,7 +7,7 @@ public class Cliente extends Pessoa {
     private String idCliente;
     private String idMesa;
     private ArrayList<Endereco> end;
-    private ArrayList<Contato> cont;
+    private ArrayList<Contato>cont;
         
 
     public String getIdCliente() {
@@ -26,9 +26,25 @@ public class Cliente extends Pessoa {
         return end;
     }    
 
+    public void adicionarEndereco(Endereco endreco) {
+        if (end != null) {
+            this.end.add(endreco);
+            this.end=new ArrayList<>();
+        }
+    }
+    
     public ArrayList getCont() {
         return cont;
     }
+    
+      public void adicionarEndereco(Contato contato) {
+        if (cont != null) {
+            this.cont.add(contato);
+            this.cont=new ArrayList<>();
+        }
+    }
+    
+    
 
     public String getIdMesa() {
         return idMesa;
