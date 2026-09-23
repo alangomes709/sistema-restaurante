@@ -86,11 +86,11 @@ public class Endereco {
     }
 
     public void setComplemento(String complemento) {
-        if (complemento != null && complemento.trim().isEmpty() == false){
-            this.complemento = complemento;            
-        }else{
-            throw new IllegalArgumentException("Complemento não pode ser nulo.");
-        }
+        if (complemento != null) {
+        this.complemento = complemento.trim();
+    } else {
+        this.complemento = "";
+    }
     }
 
     public int getNumCasa() {

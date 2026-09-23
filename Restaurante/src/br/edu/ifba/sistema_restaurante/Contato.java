@@ -26,10 +26,10 @@ public class Contato {
     }
 
     public void setEmail(String email) {
-        if (email != null && email.trim().isEmpty() == false && email.contains("@")){
+        if (email != null && email.trim().isEmpty() == false && email.contains("@") && email.contains(".")){
             this.email = email;            
         }else{
-            throw new IllegalArgumentException("Email não pode ser nulo e deve conter @.");
+            throw new IllegalArgumentException("Email não pode ser nulo e deve conter @ (ex: nome@gmail.com).");
         }
     }
 }

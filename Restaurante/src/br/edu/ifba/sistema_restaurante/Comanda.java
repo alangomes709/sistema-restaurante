@@ -70,7 +70,7 @@ public class Comanda {
     }
 
     public void setCliente(Cliente cliente) {       
-        if (this.cliente!=null) {
+        if (cliente!=null) {
             this.cliente = cliente;                
         } else {
             throw new IllegalArgumentException("Cliente não pode ser nulo.");        
@@ -83,11 +83,9 @@ public class Comanda {
     }
 
     public void setGarcom(Garcom garcom) {
-        if (this.garcom!=null) {            
-            this.garcom = garcom;
-        } else {
-            throw new IllegalArgumentException("Garcom não pode ser nulo.");        
-        }            
+        
+            this.garcom = garcom; //garcom nulo em delivery
+                 
     }
 
     public Pedido getPedido() {
@@ -95,7 +93,7 @@ public class Comanda {
     }
 
     public void setPedido(Pedido pedido) {
-        if (this.pedido!=null) {
+        if (pedido!=null) {
             this.pedido = pedido;
         } else {
             throw new IllegalArgumentException("Pedido não pode ser nulo.");        
@@ -107,11 +105,9 @@ public class Comanda {
     }
 
     public void setEntrega(Entrega entrega) {
-        if (this.entrega!=null) {
-            this.entrega = entrega;                
-        } else {
-            throw new IllegalArgumentException("Entrega não pode ser nulo.");        
-        }        
+        
+            this.entrega = entrega;  //tambem opcional              
+               
     }
 
     public Pagamento getPagamento() {
@@ -119,11 +115,8 @@ public class Comanda {
     }
 
     public void setPagamento(Pagamento pagamento) {
-        if (this.pagamento!=null) {
-            this.pagamento = pagamento;
-        } else {
-            throw new IllegalArgumentException("Pagamento não pode ser nulo.");        
-        }
         
-    }    
+            this.pagamento = pagamento;  //opcional enquanto tiver aberta
+            
+    } 
 }
