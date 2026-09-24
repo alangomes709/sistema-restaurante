@@ -40,7 +40,7 @@ public class Comanda {
         if (idComanda != null && idComanda.trim().isEmpty() == false){
             this.idComanda = idComanda;        
         }else{    
-            throw new IllegalArgumentException("id da comanda invalido");
+            throw new IllegalArgumentException("Id da comanda não pode ser nulo.");
         }
     }
 
@@ -60,7 +60,7 @@ public class Comanda {
         if (data != null && data.trim().isEmpty() == false){
             this.data = data;            
         }else{
-            throw new IllegalArgumentException("data invalida");            
+            throw new IllegalArgumentException("Data não pode ser nula.");            
         }
     }
 
@@ -69,7 +69,7 @@ public class Comanda {
     }
 
     public void setCliente(Cliente cliente) {       
-        if (this.cliente!=null) {
+        if (cliente!=null) {
             this.cliente = cliente;                
         } else {
             throw new IllegalArgumentException("Cliente não pode ser nulo.");        
@@ -82,11 +82,12 @@ public class Comanda {
     }
 
     public void setGarcom(Garcom garcom) {
-        if (this.garcom!=null) {            
-            this.garcom = garcom;
-        } else {
-            throw new IllegalArgumentException("Garcom não pode ser nulo.");        
-        }            
+        if (garcom != null){
+            this.garcom = garcom; //garcom nulo em delivery
+        }else{
+            this.garcom = null; 
+        }
+                 
     }
 
     public Pedido getPedido() {
@@ -94,7 +95,7 @@ public class Comanda {
     }
 
     public void setPedido(Pedido pedido) {
-        if (this.pedido!=null) {
+        if (pedido!=null) {
             this.pedido = pedido;
         } else {
             throw new IllegalArgumentException("Pedido não pode ser nulo.");        
@@ -106,11 +107,12 @@ public class Comanda {
     }
 
     public void setEntrega(Entrega entrega) {
-        if (this.entrega!=null) {
-            this.entrega = entrega;                
-        } else {
-            throw new IllegalArgumentException("Entrega não pode ser nulo.");        
-        }        
+        if (entrega != null){
+            this.entrega = entrega;  //tambem opcional             
+        }else{
+            this.entrega = null;
+        }
+               
     }
 
     public Pagamento getPagamento() {
@@ -118,11 +120,11 @@ public class Comanda {
     }
 
     public void setPagamento(Pagamento pagamento) {
-        if (this.pagamento!=null) {
-            this.pagamento = pagamento;
-        } else {
-            throw new IllegalArgumentException("Pagamento não pode ser nulo.");        
+        if (status == false){
+            this.pagamento = pagamento;  //opcional enquanto tiver aberta
+        }else{
+            this.pagamento = null;
         }
-        
-    }    
+            
+    } 
 }

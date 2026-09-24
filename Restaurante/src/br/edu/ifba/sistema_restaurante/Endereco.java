@@ -41,7 +41,7 @@ public class Endereco {
         if(idEndereco != null && idEndereco.trim().isEmpty() == false ){
             this.idEndereco = idEndereco;
         }else{
-            throw new IllegalArgumentException("endereço invalido");
+            throw new IllegalArgumentException("Endereço não pode ser nulo.");
         }
     }
 
@@ -53,7 +53,7 @@ public class Endereco {
         if (rua != null && rua.trim().isEmpty() == false ){
             this.rua = rua;
         }else{
-            throw new IllegalArgumentException("rua invalida");
+            throw new IllegalArgumentException("Rua não pode ser nula.");
         }
     }
 
@@ -65,7 +65,7 @@ public class Endereco {
         if (cep != null && cep.trim().isEmpty() == false && cep.length() == 8){
             this.cep = cep;
         }else{
-            throw new IllegalArgumentException("CEP invalido");
+            throw new IllegalArgumentException("CEP não pode ser nulo, deve conter somente numeros e 8 caracteres .");
         }
     }
 
@@ -77,7 +77,7 @@ public class Endereco {
         if (bairro != null && bairro.trim().isEmpty() == false ){
             this.bairro = bairro;
         }else{
-            throw new IllegalArgumentException("bairro invalido");
+            throw new IllegalArgumentException("Bairro não pode ser nulo.");
         }
     }
 
@@ -86,11 +86,11 @@ public class Endereco {
     }
 
     public void setComplemento(String complemento) {
-        if (complemento != null && complemento.trim().isEmpty() == false){
-            this.complemento = complemento;            
-        }else{
-            throw new IllegalArgumentException("complemento invalido");
-        }
+        if (complemento != null) {
+        this.complemento = complemento.trim();
+    } else {
+        this.complemento = "";
+    }
     }
 
     public int getNumCasa() {
@@ -101,7 +101,7 @@ public class Endereco {
         if (numCasa > 0){
             this.numCasa = numCasa;
         }else{
-            throw new IllegalArgumentException("O numero da casa deve ser maior que 0");
+            throw new IllegalArgumentException("O numero da casa deve ser maior que 0.");
         }
     }   
 }

@@ -25,7 +25,7 @@ public class Pedido {
         if (idPedido != null && idPedido.trim().isEmpty() == false){
             this.idPedido = idPedido;
         }else{
-            throw new IllegalArgumentException("id do pedido invalido");
+            throw new IllegalArgumentException("Id do pedido não pode ser nulo.");
         }
     }
 
@@ -34,10 +34,17 @@ public class Pedido {
     }
 
     public void setQuantidadeSolicitada(int quantidadeSolicitada) {
-        if (quantidadeSolicitada >= 0){
+        if (quantidadeSolicitada > 0){
             this.quantidadeSolicitada = quantidadeSolicitada;
         }else{
-            throw new IllegalArgumentException("quantidade invalida");
+            throw new IllegalArgumentException("Quantidade tem que ser maior que 0.");
+        }
+    }
+    
+    public void adicionarProduto(Produtos produto) {
+        if (produto != null) {
+            this.produto.add(produto);
+            this.produto=new ArrayList<>();
         }
     }
 

@@ -20,7 +20,7 @@ public class Garcom extends Pessoa {
         if (idGarcom != null && idGarcom.trim().isEmpty()==false ){
             this.idGarcom = idGarcom;
         }else{
-            throw new IllegalArgumentException("id do garçom invalido");
+            throw new IllegalArgumentException("Id do garçom não pode ser nulo.");
         }
     }
     

@@ -29,12 +29,13 @@ public class Pessoa {
     }
 
     public void setCpf(String cpf) {
-        if (cpf != null && cpf.isEmpty() == false && cpf.length() == 11){
+        if (cpf != null && cpf.trim().isEmpty() == false && cpf.length() == 11){
             this.cpf = cpf;  
         }else{
-            throw new IllegalArgumentException("CPF deve ter somente numeros e 11 caracteres");
+            throw new IllegalArgumentException("CPF não pode ser nulo, deve ter somente numeros e 11 caracteres.");
         }
     }
+    
 }
     
     

@@ -17,7 +17,7 @@ public class Contato {
         if (telefone != null && telefone.trim().isEmpty() == false && telefone.length() == 11){
             this.telefone = telefone;            
         } else {
-            throw new IllegalArgumentException("numero invalido");
+            throw new IllegalArgumentException("Telefone não pode ser nulo, deve conter somente numeros e 11 caracteres.");
         }
     }
 
@@ -26,10 +26,10 @@ public class Contato {
     }
 
     public void setEmail(String email) {
-        if (email != null && email.trim().isEmpty() == false && email.contains("@")){
+        if (email != null && email.trim().isEmpty() == false && email.contains("@") && email.contains(".")){
             this.email = email;            
         }else{
-            throw new IllegalArgumentException("email invalido");
+            throw new IllegalArgumentException("Email não pode ser nulo e deve conter @ (ex: nome@gmail.com).");
         }
     }
 }
