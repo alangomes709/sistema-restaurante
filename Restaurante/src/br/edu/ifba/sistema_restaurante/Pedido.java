@@ -42,10 +42,10 @@ public class Pedido {
     }
     
     public void adicionarProduto(Produtos produto) {
-        if (produto != null) {
-            this.produto.add(produto);
-            this.produto=new ArrayList<>();
+        if (produto == null) {
+            throw new IllegalArgumentException("o produto nao pode ser nulo.");   
         }
+        this.produto.add(produto);
     }
 
 }
