@@ -32,4 +32,10 @@ public class Contato {
             throw new IllegalArgumentException("Email não pode ser nulo e deve conter @ (ex: nome@gmail.com).");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Contato{" + "telefone=" + telefone + ", email=" + email + '}';
+    }
+    
 }

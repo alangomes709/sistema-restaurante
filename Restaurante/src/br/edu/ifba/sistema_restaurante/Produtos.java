@@ -63,4 +63,10 @@ public class Produtos {
             throw new IllegalArgumentException("Quantidade tem que ser maior ou igual a 0.");
         }
     }  
+
+    @Override
+    public String toString() {
+        return "Produtos{" + "idProduto=" + idProduto + ", descricao=" + descricao + ", precoUnitario=" + precoUnitario + ", quantidadeDisponivel=" + quantidadeDisponivel + '}';
+    }
+    
 }

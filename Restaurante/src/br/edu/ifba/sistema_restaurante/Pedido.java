@@ -48,4 +48,10 @@ public class Pedido {
         this.produto.add(produto);
     }
 
+    @Override
+    public String toString() {
+        return "Pedido{" + "idPedido=" + idPedido + ", quantidadeSolicitada=" + quantidadeSolicitada + ", produto=" + produto + '}';
+    }
+    
+
 }

@@ -53,7 +53,7 @@ public class Cliente extends Pessoa {
         return end;
     }    
     
-    public ArrayList getCont() {
+    public ArrayList<Contato> getCont() {
         return cont;
     }
  
@@ -82,4 +82,10 @@ public class Cliente extends Pessoa {
         }
         this.end.add(endereco);
     } 
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "idCliente=" + idCliente + ", idMesa=" + idMesa + ", end=" + end + ", cont=" + cont + '}';
+    }
+    
 }
