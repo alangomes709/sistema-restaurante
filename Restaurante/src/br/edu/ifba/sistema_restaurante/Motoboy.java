@@ -24,6 +24,11 @@ public class Motoboy extends Pessoa {
             throw new IllegalArgumentException("Id do motoboy não pode ser nulo.");            
         }
     }   
+
+    @Override
+    public String toString() {
+        return "Motoboy{" + "idMotoboy=" + idMotoboy + '}';
+    }
     
 
     

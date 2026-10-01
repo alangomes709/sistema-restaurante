@@ -127,4 +127,10 @@ public class Comanda {
         }
             
     } 
+
+    @Override
+    public String toString() {
+        return "Comanda{" + "idComanda=" + idComanda + ", status=" + status + ", data=" + data + ", cliente=" + cliente + ", garcom=" + garcom + ", pedido=" + pedido + ", entrega=" + entrega + ", pagamento=" + pagamento + '}';
+    }
+    
 }

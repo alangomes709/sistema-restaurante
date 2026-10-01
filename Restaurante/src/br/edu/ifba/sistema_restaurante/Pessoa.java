@@ -35,6 +35,12 @@ public class Pessoa {
             throw new IllegalArgumentException("CPF não pode ser nulo, deve ter somente numeros e 11 caracteres.");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", cpf=" + cpf + '}';
+    }
+    
     
 }
     

@@ -46,4 +46,10 @@ public class MetodoPagamento {
             throw new IllegalArgumentException("Taxa não pode ser menor que 0.");
         }
     }  
+
+    @Override
+    public String toString() {
+        return "MetodoPagamento{" + "metodoPagamento=" + metodoPagamento + ", descricao=" + descricao + ", taxa=" + taxa + '}';
+    }
+    
 }

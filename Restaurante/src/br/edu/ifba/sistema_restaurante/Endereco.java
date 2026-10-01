@@ -103,5 +103,11 @@ public class Endereco {
         }else{
             throw new IllegalArgumentException("O numero da casa deve ser maior que 0.");
         }
-    }   
+    } 
+
+    @Override
+    public String toString() {
+        return "Endereco{" + "idEndereco=" + idEndereco + ", rua=" + rua + ", cep=" + cep + ", bairro=" + bairro + ", complemento=" + complemento + ", numCasa=" + numCasa + '}';
+    }
+    
 }

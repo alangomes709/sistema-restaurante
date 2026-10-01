@@ -4,7 +4,7 @@ public class Contato {
     private String telefone;
     private String email;
 
-    public Contato(String telefone, String email) {
+    public Contato(String telefone, String email){
         setTelefone(telefone);
         setEmail(email);
     }
@@ -32,4 +32,10 @@ public class Contato {
             throw new IllegalArgumentException("Email não pode ser nulo e deve conter @ (ex: nome@gmail.com).");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Contato{" + "telefone=" + telefone + ", email=" + email + '}';
+    }
+    
 }

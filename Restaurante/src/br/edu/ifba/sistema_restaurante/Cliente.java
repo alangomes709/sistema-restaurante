@@ -53,7 +53,7 @@ public class Cliente extends Pessoa {
         return end;
     }    
     
-    public ArrayList getCont() {
+    public ArrayList<Contato> getCont() {
         return cont;
     }
  
@@ -69,17 +69,23 @@ public class Cliente extends Pessoa {
         }
     }  
           public void adicionarContato(Contato contato) {
-        if (cont != null) {
-            this.cont.add(contato);
-            this.cont=new ArrayList<>();
+        if (contato == null) {
+            throw new IllegalArgumentException("o contato nao pode ser nulo.");
         }
+        this.cont.add(contato);
     }
           
           
     public void adicionarEndereco(Endereco endereco) {
-        if (end != null) {
-            this.end.add(endereco);
-            this.end=new ArrayList<>();
+        if (endereco == null) {
+            throw new IllegalArgumentException("o endereco nao pode ser nulo.");
         }
+        this.end.add(endereco);
+    } 
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "idCliente=" + idCliente + ", idMesa=" + idMesa + ", end=" + end + ", cont=" + cont + '}';
     }
+    
 }

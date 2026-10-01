@@ -51,5 +51,10 @@ public class Pagamento {
         throw new IllegalArgumentException("Método de pagamento não pode ser nulo.");
     }
     }
+
+    @Override
+    public String toString() {
+        return "Pagamento{" + "idPagamento=" + idPagamento + ", taxaServico=" + taxaServico + ", metPag=" + metPag + '}';
+    }
     
 }

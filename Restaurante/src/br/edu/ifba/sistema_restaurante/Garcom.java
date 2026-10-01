@@ -23,5 +23,11 @@ public class Garcom extends Pessoa {
             throw new IllegalArgumentException("Id do garçom não pode ser nulo.");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Garcom{" + "idGarcom=" + idGarcom + '}';
+    }
+    
     
 }
