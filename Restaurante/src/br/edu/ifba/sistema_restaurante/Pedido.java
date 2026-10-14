@@ -6,6 +6,9 @@ public class Pedido {
     private String idPedido;
     private int quantidadeSolicitada;
     private ArrayList<Produtos> produto;
+    
+    public Pedido(){        
+    }
 
     public Pedido(String idPedido, int quantidadeSolicitada) {
         setIdPedido(idPedido);

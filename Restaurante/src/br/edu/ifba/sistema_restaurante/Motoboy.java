@@ -4,14 +4,14 @@ public class Motoboy extends Pessoa {
     private String idMotoboy;    
 
     public Motoboy(String idMotoboy) {
-        setIdMotoboy(idMotoboy);
+        this.idMotoboy = idMotoboy;
     }
 
     public Motoboy(String idMotoboy, String nome, String cpf) {
         super(nome, cpf);
-        setIdMotoboy(idMotoboy);
+        this.idMotoboy = idMotoboy;
     }
-    
+
     
     public String getIdMotoboy() {
         return idMotoboy;

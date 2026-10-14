@@ -5,7 +5,7 @@ public class Entrega {
     private Endereco destino;
     private Motoboy motoboy;    
 
-    public Entrega(String idEntrega, Endereco entrega) {
+    public Entrega(String idEntrega, Endereco distino) {
         setIdEntrega(idEntrega);
         setDestino(destino);
     }

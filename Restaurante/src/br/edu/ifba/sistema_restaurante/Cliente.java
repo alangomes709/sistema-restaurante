@@ -9,22 +9,12 @@ public class Cliente extends Pessoa {
     private ArrayList<Endereco> end;
     private ArrayList<Contato> cont;
 
+    public Cliente(){        
+    }
+    
     public Cliente(String idCliente, String nome, String cpf) {
         super(nome, cpf);
         setIdCliente(idCliente);
-        this.end = new ArrayList<>();
-        this.cont = new ArrayList<>(); 
-    }
-
-    public Cliente(String idCliente) {
-        setIdCliente(idCliente);
-        this.end = new ArrayList<>();
-        this.cont = new ArrayList<>(); 
-    }
-
-    public Cliente(String idCliente, String idMesa) {
-        setIdCliente(idCliente);
-        setIdMesa(idMesa);
         this.end = new ArrayList<>();
         this.cont = new ArrayList<>(); 
     }
